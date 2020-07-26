@@ -14,7 +14,11 @@ app.get('/', function (req, res) {
         stuff: "tings"
     });
 });
- 
+
+app.get('/about.html', function (req, res) {
+    res.render('about', {
+    });
+});
 //SET static folder
 app.use(express.static(path.join(__dirname, 'public')));
 app.listen(PORT, () => console.log('Server listening on port: '+PORT));
